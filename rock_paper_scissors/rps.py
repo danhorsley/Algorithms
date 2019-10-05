@@ -3,7 +3,15 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
+  if n == 0:
+    new_combos = [[]]
+  elif n>1:
+    rps = ['rock','paper','scissors']
+    new_combos = [(combo+[choice]) for combo in rock_paper_scissors(n-1)for choice in rps ]
+  else:
+    new_combos = [['rock'],['paper'],['scissors']]
+
+  return new_combos
 
 
 if __name__ == "__main__":
