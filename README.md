@@ -1,4 +1,5 @@
 # Algorithms
+# small change 1
 
 Each directory contains a separate problem that you'll be tasked with solving.
 Inside each directory, you'll find instructions for that problem, along with a
