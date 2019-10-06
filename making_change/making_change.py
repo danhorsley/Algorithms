@@ -9,6 +9,9 @@ def making_change(n, d = [1,5,10,25,50],boost = 'y'):
     return 1
   else:
     if boost == 'y':
+      # this 'boosts' my cache.  for example if i go straight into 10000 my 
+      # loop will have too many recursions, but if i populate my cache first with
+      # smaller values and build it up gradually it works fine
       booster = [n*500 for n in range(20)]
       for b in booster:
         making_change(b,[1,5,10,25,50],'n')
